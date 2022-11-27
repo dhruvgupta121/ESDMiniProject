@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 
+
 const Login = () => {
 
     //Use to set state of the variable whenever some changes occur...
@@ -16,15 +17,15 @@ const Login = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form className={"auth-form-container"} onSubmit={handleSubmit}>
 
                 {/*Adding the Email field in the form...*/}
-                <label title={"email"}>Email</label>
+                <label htmlFor={"email"}>Email</label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)}  type={"email"}
                        placeholder={"youremail@gmsil.com"} id={"email"} name={"email"}/>
 
                 {/*Adding the Email field in the form...*/}
-                <label title={"password"}>Password</label>
+                <label htmlFor={"password"}>Password</label>
                 <input value={password} type={"password"} onChange={(e) => setPassword(e.target.value)}
                        placeholder={"**********"} id={"password"} name={"password"}/>
 
